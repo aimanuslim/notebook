@@ -100,6 +100,9 @@ where screen number is the number you want
 
 		head -2 english_dataset.csv |tail -1  | sed 's/[^,]//g' | wc -c
 
++ Replace substring and save back to file
+
+		sed -i 's/original/new/g' file.txt
 
 # SeismicUnix
 + Creating waveform
