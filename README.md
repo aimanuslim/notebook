@@ -163,3 +163,12 @@ where screen number is the number you want
 + Viewing status of tracked files
 
 		git status --untracked-files=no 
+
++ Create a new branch, with modified files to be commited to new branch
+
+		git checkout -b [branch name]
+
++ Revert to certain commit 
+
+		git reset --hard [commit_id]
+		
