@@ -88,6 +88,10 @@ where screen number is the number you want
 
 		grep -n file | cut -f1 -d
 
++ grep showing filename for occurence of fine
+
+		find ./ -name "Makefile" -exec grep AVX {} /dev/null  \;
+
 + Inline for loop (csh)
 
 		echo 'foreach f ( 1 2 3 )\n echo $f \n end' | tcsh
