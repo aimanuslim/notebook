@@ -104,6 +104,9 @@ where screen number is the number you want
 
 		head -2 english_dataset.csv |tail -1  | sed 's/[^,]//g' | wc -c
 
++ Replace substring and save back to file
+
+		sed -i 's/original/new/g' file.txt
 
 # SeismicUnix
 + Creating waveform
@@ -164,3 +167,12 @@ where screen number is the number you want
 + Viewing status of tracked files
 
 		git status --untracked-files=no 
+
++ Create a new branch, with modified files to be commited to new branch
+
+		git checkout -b [branch name]
+
++ Revert to certain commit 
+
+		git reset --hard [commit_id]
+		
