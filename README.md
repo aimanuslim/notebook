@@ -21,6 +21,18 @@ where screen number is the number you want
 
 		kill $(ps aux | grep '[p]ython csp_build.py' | awk '{print $2}')
 
++ kill force
+
+		kill -9 pid
+
++ grepping for process
+
+		pgrep 'pattern'
+
++ viewing process tree uncompacted
+
+		pstree -c
+
 + Run program even when ssh connection is terminated
 
 		nohup [command] > logfile
