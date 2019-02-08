@@ -57,6 +57,11 @@ where screen number is the number you want
 
 		kill -f pattern
 
++ ping different hosts
+
+		echo 'set i = 31 \n while( $i < 99 )\n ping -c 2 cpu0$i \n @ i++ \n end' | tcsh | grep '0 received'
+
+
 # Common
 
 + Find row based on maximum value of a certain column (looking at second column)
