@@ -192,4 +192,27 @@ where screen number is the number you want
 + Revert to certain commit 
 
 		git reset --hard [commit_id]
+
+# SCons (Madagascar)
+
++ Compile everything within directory recursively
+
+		sftour scons lock
+
++ View plots 
+
+		scons view
+
++ Create pdf out of paper.tex (*tex file in the directory)
+
+		scons pdf
+
++ Create pdf to read
+
+		scons read
+
+
+
+
+
 		
