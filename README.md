@@ -130,6 +130,14 @@ where screen number is the number you want
 
 		uwaveform tape=ricker1 fpeak=(fdommax) dt=(sample rate in seconds) > wavename.su
 
++ Windowing (selecting) traces by its keys
+
+		suwind < input.su key=fldr min=1201 max=1301 > test.su
+
++ Splitting su data into multiple files based on keys
+
+		susplit key=sx < input.su
+
 + Wave viewing
 
 		suxwigb < wavename.su 
