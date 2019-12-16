@@ -5,7 +5,7 @@ This is a list of most common Linux command lines tips and tricks. Includes both
 # Linux Admin
 + Modifying user
 
-		Usermod -u uid -g gid [username]
+		usermod -u uid -g gid [username]
 
 + IP address
 
@@ -125,6 +125,19 @@ where screen number is the number you want
 
 		sed -i 's/original/new/g' file.txt
 
++ Find pid using pattern
+
+		pgrep [-afl] [pattern]
+
++ Kill pids using pattern (-l includes the whole command for the process)
+
+		pkill -lf [pattern]
+
++ Get hostnames and ips registered
+	
+		getent hosts
+
+
 # SeismicUnix
 + Creating waveform
 
@@ -172,6 +185,12 @@ where screen number is the number you want
 
 		suchw  key1=dt key2=scalel a=0 b=25000 e=0 c=0 d=1 < input_su_name > output_su_name
 
++ Converting CSV file to segy 
+
+		a2b n1=[time steps] < [csv file] | suaddhead ns=[time steps] | sushw key=dt a=[sample rate in micro seconds] > [output file name (.su)]
+		segyhdrs < [output file name (.su)]
+		segywrite < [output file name (.su)] tape=[output file name (.segy)]
+
 # Other commands
 + Running MPI
 
@@ -191,7 +210,7 @@ where screen number is the number you want
 
 + Viewing status of tracked files
 
-		git status --untracked-files=no 
+		git status -uno
 
 + Create a new branch, with modified files to be commited to new branch
 
@@ -218,6 +237,32 @@ where screen number is the number you want
 + Create pdf to read
 
 		scons read
+
+# Python
+
++ Modify numpy arrays by column x and y.
+
+		for ix,iy in np.ndindex(placeholder.shape):
+			[operation]
+
+# PBSPro
++ Select pbs jobs by user
+
+		qselect -u [username] 
+
++ View details of pbs job
+
+		qstat -fx [pbs_job_id] 
+
++ deleting pbs job
+
+		qdel [pbs_job_id] 
+
++ View nodes configured under PBS
+
+		pbsnodes -aSj 
+
+
 
 
 
