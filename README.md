@@ -3,6 +3,10 @@
 This is a list of most common Linux command lines tips and tricks. Includes both for C-Shell and Bash.
 
 # Linux Admin
++ Find where commands/files are
+
+        locate [keyword]
+
 + Modifying user
 
 		usermod -u uid -g gid [username]
@@ -219,6 +223,12 @@ where screen number is the number you want
 + Revert to certain commit 
 
 		git reset --hard [commit_id]
+
++ Pulling from remote with changes locally
+
+        git stash
+        git pull origin [remote branch]
+        git stash pop
 
 # SCons (Madagascar)
 
